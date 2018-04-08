@@ -1,8 +1,21 @@
-# ESP-IRCcontrol v1.0  - Control ESP8266 from the Internet
+# ESP-IRCcontrol v1.0 ESP8266 from the Internet
 
-Version 1.0,   08-04-2018  [PDAControl](http://pdacontrolen.com). 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA; sin siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
+Version 1.0,   08-04-2018  [PDAControl](http://pdacontrolen.com)
+
+
+
+Version 4.0.8, August 06, 2017  
+Author: M. Westenberg (mw12554@hotmail.com)  
+Copyright: M. Westenberg (mw12554@hotmail.com)  
+
+
+
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA;
+sin siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
 
 ![alt text](http://pdacontrolen.com/wp-content/uploads/2018/03/Basic-Blynk-PZEM-004_part1-768x432.png "ESP-IRCcontrol v1.0")
 
