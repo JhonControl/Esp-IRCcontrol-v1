@@ -60,12 +60,13 @@ Contiene 2 Archivos Arduino IDE :
 * **arduinoirc for Uwe Kamper** - *Initial work* - [arduinoirc](https://github.com/uwekamper/arduinoirc)
 Thanks for contributing  [Uwe Kamper](https://github.com/uwekamper).
 
-## Materials / Materiales
+# Materials / Materiales
 * [ESP8266 12E NodeMCU](http://s.click.aliexpress.com/e/b6QNZfy) - Module Espressif
 * [Sensor DHT11](http://s.click.aliexpress.com/e/b6QNZfy) - Relative Humidity and Temperature
 * [Sensor DS18B20 Onewire](http://s.click.aliexpress.com/e/meqfuNv) - Temperature
+* Diode Led - Output Gpio 12
 
-## Mount / Montaje
+## Mounting / Montaje
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/mejor.jpg "PZEM-004 ESP8266 Blynk")
 
 ## Connections / Conexiones
@@ -84,7 +85,7 @@ Sensors:
   ESP8266 12E         DS18B20
   GPIO2  (D4)  <----> DATA
 ```
-## Arduino IDE configuration
+# Arduino IDE configuration
 Parameters that require revision and configuration in Arduino IDE code:
 
 Parametros que requieren revision y configuracion en codigo Arduino IDE:
@@ -96,6 +97,12 @@ Allows the ESP8266 can **only be controlled by users or irc clients included in 
 
 ENABLE_USERPERMITTED = 0 
 Allows any of the irc users or clients in the same channel to control or send commands to our ESP8266.
+
+```
+#define ENABLE_USERPERMITTED  1          //  1 =secure mode    0 = Unsafe way, everyone controls.
+uint32_t users=2;                                       // Number of users Allowed to control ESP    
+String nick_users[]={"PDUSER|xxxxxx", "PDUSER|0s046"};   //Allowed users to control ESP8266          
+```
 
 ### Seguridad para Controlar ESP8266
 
@@ -126,36 +133,40 @@ String nickname  =   "ESP8266IRC";         // MAX 10 Characters - nickname modul
 String channel   =   "#PDAChannel";        //  example "#TestIRCready"; 
 ```
 
-## Test from IRC WEB client ... / Prueba desde cliente IRC WEB
+# Test from IRC Web client / Prueba desde cliente IRC Web
 We have assigned this IRC Web client to perform tests:          [ESP8266 IRCControl WEB IRC Client](http://pdacontrolen.com/irc/). 
 
 Hemos destinado este cliente IRC Web para que realicen pruebas: [ESP8266 IRCControl Cliente WEB IRC](http://pdacontrolen.com/irc/). 
 
- 1. Enter to [http://pdacontrolen.com/irc/](http://pdacontrolen.com/irc/) and Press the Green Button "Connecting ..." 
+ 1. Enter to [http://pdacontrolen.com/irc/](http://pdacontrolen.com/irc/) and **Press the Green Button "Connecting ...**" 
  
-    Ingresar a [http://pdacontroles.com/irc/](http://pdacontroles.com/irc/) y Presionar el Boton Verde "Conectando ..."
+    Ingresar a [http://pdacontroles.com/irc/](http://pdacontroles.com/irc/) y **Presionar el Boton Verde "Conectando ...**"
+    
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/WEBIRC1.png "PZEM-004 ESP8266 Blynk")
 
- 2. Entering Channel "#PDAChannel!" with automatic user/nickname example: PDAUSER|31947. 
+ 2. **Entering Channel "#PDAChannel!"** with **automatic user/nickname example: PDAUSER|31947**. 
  
-    Ingresando a Canal "#PDAChannel!" con usuario/nickname automatico ejemplo: PDAUSER|31947. 
+    **Ingresando a Canal "#PDAChannel!"** con **usuario/nickname automatico ejemplo: PDAUSER|31947**. 
+    
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/WEBIRC2.png "PZEM-004 ESP8266 Blynk")
 
- 3. Send example command   "HIGH GPIO12".
+ 3. Send example command   **"HIGH GPIO12"**.
  
-    Enviar comando ejemplo "HIGH GPIO12".    
+    Enviar comando ejemplo **"HIGH GPIO12"**.    
+    
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/WEBIRC3.png "PZEM-004 ESP8266 Blynk")
 
- 4. See response of ESP8266IRCXXXXXX = "Turn ON: ON GPIO12".
+ 4. See response of ESP8266IRCXXXXXX = **"Turn ON: ON GPIO12"**.
  
-    Ver respuesta de ESP8266IRCXXXXXX = "Turn ON : ON GPIO12".     
+    Ver respuesta de ESP8266IRCXXXXXX = **"Turn ON : ON GPIO12"**.     
+    
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/WEBIRC4.png "PZEM-004 ESP8266 Blynk")
 
 
 ## Available Commands / Comandos Disponibles 
-Skip Comillas "" when writing commands in [irc web client](http://pdacontrolen.com/irc/). 
+Skip Comillas "" when writing commands in **[irc web client](http://pdacontrolen.com/irc/)**. 
 
-Omitir Comillas "" al escribir comandos en [cliente irc web](http://pdacontrolen.com/irc/). 
+Omitir Comillas "" al escribir comandos en **[cliente irc web](http://pdacontrolen.com/irc/)**. 
  
 * Command: **"HIGH GPIOXX"**      example: "HIGH GPIO12" Turn on GPIO outputs
 * Command: **"LOW GPIOXX"**       example:  "LOW GPIO12" Turn off GPIO outputs
@@ -168,19 +179,19 @@ Omitir Comillas "" al escribir comandos en [cliente irc web](http://pdacontrolen
 * Command: **"ESP8266IRCXXXXXX Help" or "Nicknameesp Help"** - list available commands
 * Command: sad face = :(
 
-## Documentation / Documentacion 
+# Documentation / Documentación 
 * Read Considerations, Recommendations and Suggestions complete documentation of the project in [ESP8266 IRCControl desde Internet  Interacion IoT v1.0  Part 1](http://pdacontrolen.com/meter-pzem-004-esp8266-platform-iot-blynk-app/). 
 
 * Leer Consideraciones, Recomendaciones y sugerencias cocumentacion Completa del proyecto en  [ESP8266 IRCControl desde Internet  Interacion IoT v1.0  Part 1](http://pdacontroles.com/medidor-pzem-004-esp8266-plataforma-iot-blynk-app/). 
 
-## Donations / Donaciones 
+# Donations / Donaciones 
 Collaborate this project and other projects in [PDAControl](http://pdacontrolen.com)  via [Paypal](https://www.paypal.me/pdacontrol). 
 
 Respalde este proyecto y otros proyectos en [PDAControl](http://pdacontrolen.com)  mediante [Paypal](https://www.paypal.me/pdacontrol).
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/pdacontrol)
 
-## More about PDAControl / Mas sobre PDAControl
+# More about PDAControl / Mas sobre PDAControl
 * [PDAControl English](http://pdacontrolen.com). 
 * [PDAControl Español](http://pdacontroles.com). 
 * [PDAControl Youtube Channel](https://www.youtube.com/channel/UCv1D6zrC0ZL0PSgM6tdEpPg/videos). 
