@@ -1,6 +1,6 @@
 # ESP-IRCcontrol v1.0 ESP8266 from the Internet
 
-Version 1.0,   08-04-2018  [PDAControl](http://pdacontrolen.com)
+Version 1.0   Date 08-04-2018   [PDAControl](http://pdacontrolen.com)
 
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
@@ -62,12 +62,12 @@ Thanks for contributing  [Uwe Kamper](https://github.com/uwekamper).
 
 # Materials / Materiales
 * [ESP8266 12E NodeMCU](http://s.click.aliexpress.com/e/b6QNZfy) - Module Espressif
-* [Sensor DHT11](http://s.click.aliexpress.com/e/b6QNZfy) - Relative Humidity and Temperature
+* [Sensor DHT11](http://s.click.aliexpress.com/e/meqfuNv) - Relative Humidity and Temperature
 * [Sensor DS18B20 Onewire](http://s.click.aliexpress.com/e/meqfuNv) - Temperature
 * Diode Led - Output Gpio 12
 
 ## Mounting / Montaje
-![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/mejor.jpg "PZEM-004 ESP8266 Blynk")
+![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/ESP-IRCcontrol-v10_MINI.png "ESP-IRCCONTROL")
 
 ## Connections / Conexiones
 Sensors:
@@ -144,9 +144,9 @@ Hemos destinado este cliente IRC Web para que realicen pruebas: [ESP8266 IRCCont
     
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/WEBIRC1.png "PZEM-004 ESP8266 Blynk")
 
- 2. **Entering Channel "#PDAChannel!"** with **automatic user/nickname example: PDAUSER|31947**. 
+ 2. **Entering Channel "#PDAChannel"** with **automatic user/nickname example: PDAUSER|31947**. 
  
-    **Ingresando a Canal "#PDAChannel!"** con **usuario/nickname automatico ejemplo: PDAUSER|31947**. 
+    **Ingresando a Canal "#PDAChannel"** con **usuario/nickname automatico ejemplo: PDAUSER|31947**. 
     
 ![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/WEBIRC2.png "PZEM-004 ESP8266 Blynk")
 
