@@ -9,12 +9,12 @@ without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA;
 sin siquiera la garantía implícita de COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR.
 
-![alt text](http://pdacontrolen.com/wp-content/uploads/2018/03/Basic-Blynk-PZEM-004_part1-768x432.png "ESP-IRCcontrol v1.0")
+![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/ESP-IRCcontrol-v10_MINI.png "ESP-IRCCONTROL")
 
 ## Description
 
 Initial tests of implementation of [IRC (Internet Chat Relay)](https://en.wikipedia.org/wiki/Internet_Relay_Chat) Client 
-in ESP8266 12E allowing communication by internet via Chat IRC, There are many methods, Platforms and
+in **ESP8266 12E** allowing communication by internet via **Chat IRC**, There are many methods, Platforms and
 IoT solutions for the control and monitoring of ESP8266,but.This implementation allows in a few steps to control 
 an ESP8266 from the Internet in a very simple way without very special configurations using the existing ones
 Public [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat)  servers simply sending messages between devices.
@@ -35,8 +35,8 @@ Contains 2 files Arduino IDE:
 * The protocol guarantees the sending and receiving of messages between clients.
 
 ## Descripción
-Pruebas iniciales de implementacion de cliente [IRC (Internet Chat Relay)](https://en.wikipedia.org/wiki/Internet_Relay_Chat) en ESP8266 12E 
-permitiendo comunicacion por internet a travez Chat IRC, Existen muchos metodos, Plataformas y soluciones IoT para el control y monitoreo de los ESP8266, 
+Pruebas iniciales de implementacion de cliente [IRC (Internet Chat Relay)](https://en.wikipedia.org/wiki/Internet_Relay_Chat) en **ESP8266 12E** 
+permitiendo comunicacion por internet a través **Chat IRC**, Existen muchos metodos, Plataformas y soluciones IoT para el control y monitoreo de los ESP8266, 
 pero muy pocas son sencillas, basicas y sin complicaciones.Esta implementacion permite en pocos pasos controlar un
 ESP8266 desde Internet de una manera muy sencilla sin configuraciones muy especialidas utilizando los existentes 
 servidores [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat)  publicos enviando simplemente mensajes entre dispositivos.
@@ -67,7 +67,7 @@ Thanks for contributing  [Uwe Kamper](https://github.com/uwekamper).
 * Diode Led - Output Gpio 12
 
 ## Mounting / Montaje
-![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/ESP-IRCcontrol-v10_MINI.png "ESP-IRCCONTROL")
+![alt text](http://pdacontroles.com/wp-content/uploads/2018/04/mejor-768x461.jpg "mounting")
 
 ## Connections / Conexiones
 Sensors:
