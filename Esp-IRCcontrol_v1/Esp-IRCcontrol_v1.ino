@@ -124,6 +124,8 @@ String Nick;
 String Mac;
 String NickComplete;
 uint32_t counterInteractions=0;
+uint32_t reeboot_esp=0;
+uint32_t reeboot_hr = 8;
 
 /// Buffers IRC /////////
 #define IRC_BUFSIZE  32     
@@ -149,6 +151,8 @@ void setup() {                              // Tutorial http://pdacontrolen.com/
   
   delay(10);
 
+  reeboot_esp=0;
+  
   // We start by connecting to a WiFi network
   Serial.print("Connecting to ");
   Serial.println(ssid);
@@ -174,7 +178,7 @@ void setup() {                              // Tutorial http://pdacontrolen.com/
    Mac.replace(":", "");
    //Serial.println(Mac);      
    NickComplete = nickname + Mac;   
-   Serial.println("nickname esp8266 = "+NickComplete); 
+   Serial.println("nickname esp8266 = "+NickComplete);    
    // ========================================================================================================================================================
 }
 
@@ -379,7 +383,9 @@ void handle_irc_connection() {
       
       if(strcmp(buf, "PING") == 0) {           // RECEIVE "PING"           RECIBE "PING"
         client.println("PONG\r");              //ESP8266 RESPONSE "PONG"   ESP8266 RESPONDE "PONG"
-       /// Serial.println("PING->PONG");   
+       /// Serial.println("PING->PONG");  
+
+        
                   
            #if ENABLE_INTERACTIVE==1
                counterInteractions = counterInteractions +1; // Incrementa cada vez que hay PING, cada 3 minutos aproximadamente /// Increase every time there is PING, every 3 minutes approximately       
@@ -392,6 +398,18 @@ void handle_irc_connection() {
                   IRCsendMsg(channel,"Mas info Proyecto PDAControl: pdacontroles.com/irc  ;)"); //Envia un mensaja al chat    // send message to chat
                   counterInteractions=0;
                }
+        
+        
+               reeboot_esp= reeboot_esp +1;		  
+		  
+		       ////   reboot esp8266 to clean registers .. just in case   8 HOURS  ///reinicio de esp8266 para limpiar registros.. por si acaso cada 8 hr
+                if (reeboot_esp>= (30 * reeboot_hr )){  /// reset  reboot_hr = Hours 
+				   //IRCsendMsg(channel,"Me reiciare cada "+String (reeboot_hr)+"Horas por seguridad!! Bye"); 
+				   
+				   IRCsendMsg(channel,"Cleaning .. I'll be back in a moment ... :) ");  				    
+				   ESP.restart();
+				   reeboot_esp=0;
+			   }  /// Restart esp8266 por seguridad cada 4hr aprox
              
       }
     }
